@@ -11,7 +11,6 @@ import { selectIsCollectionFetching, selectIsCollectionLoaded } from "../../redu
 const CollectionsOverviewWithSpinner = withSpinner(CollectionsOverview);
 const CollectionPageWithSpinner = withSpinner(CollectionPage);
 
-console.log(CollectionsOverviewWithSpinner);
 
 class Shop extends React.Component {
   async componentDidMount() {
