@@ -3,15 +3,19 @@ import { connect } from "react-redux";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
-import "./cart-icon.scss";
-import { ReactComponent as ShoppingIcon } from "../../assets/original (1).svg";
+// import "./cart-icon.scss";
+import {CartIconWrapper, ShoppingIcon, ItemCount} from "./cart-icon.styles"
+
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => {
   return (
-    <div className="cart-icon" onClick={toggleCartHidden}>
-      <ShoppingIcon className="shopping-icon" />
-      <span className="item-count">{itemCount}</span>
-    </div>
+    <CartIconWrapper onClick={toggleCartHidden}>
+      <ShoppingIcon
+        className="shopping-icon"
+        style={{ width: "24px", height: "24px" }}
+      />
+      <ItemCount className="item-count">{itemCount}</ItemCount>
+    </CartIconWrapper>
   );
 };
 

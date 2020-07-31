@@ -6,47 +6,54 @@ import {
   selectCartTotal,
 } from "../../redux/cart/cart.selectors";
 import CheckoutItems from "../../components/checkout-items/CheckoutItems";
-import StripeButton from "../../components/stripe-button/StripeButton"
-import "./checkout.scss";
+import StripeButton from "../../components/stripe-button/StripeButton";
+import {
+  CheckoutPageContainer,
+  CheckoutHeader,
+  HeaderBlockContainer,
+  TotalContainer,
+  TestWarning
+} from "./checkout.styles";
+
 
 const Checkout = ({ cartItems, total }) => {
   return (
-    <div className="checkout-page">
-      <div className="checkout-header">
-        <div className="header-block">
+    <CheckoutPageContainer>
+      <CheckoutHeader>
+        <HeaderBlockContainer>
           <span>Product</span>
-        </div>
+        </HeaderBlockContainer>
 
-        <div className="header-block">
+        <HeaderBlockContainer>
           <span>Description</span>
-        </div>
+        </HeaderBlockContainer>
 
-        <div className="header-block">
+        <HeaderBlockContainer>
           <span>Quantity</span>
-        </div>
+        </HeaderBlockContainer>
 
-        <div className="header-block">
+        <HeaderBlockContainer>
           <span>Price</span>
-        </div>
+        </HeaderBlockContainer>
 
-        <div className="header-block">
+        <HeaderBlockContainer>
           <span>Remove</span>
-        </div>
-      </div>
+        </HeaderBlockContainer>
+      </CheckoutHeader>
       {cartItems.map((cartItem) => (
         <CheckoutItems key={cartItem.id} cartItem={cartItem} />
       ))}
 
-      <div className="total">
+      <TotalContainer>
         <span>TOTAL: ${total}</span>
-      </div>
-      <div className="test-warning">
+      </TotalContainer>
+      <TestWarning>
         *Please use the following test credit card for payments*
-        <br/>
+        <br />
         4242 4242 4242 4242 - Exp: 1/21 - CVV: 123
-      </div>
-      <StripeButton price={total}/>
-    </div>
+      </TestWarning>
+      <StripeButton price={total} />
+    </CheckoutPageContainer>
   );
 };
 
