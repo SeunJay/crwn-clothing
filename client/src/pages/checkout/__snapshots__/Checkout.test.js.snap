@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Checkout Page  1`] = `ShallowWrapper {}`;
-
-exports[`Checkout Page should render the Checkout component 1`] = `undefined`;
-
-exports[`Checkout Page take snapshot 1`] = `ShallowWrapper {}`;
