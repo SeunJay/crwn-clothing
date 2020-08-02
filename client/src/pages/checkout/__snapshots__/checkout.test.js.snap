@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout checkout 1`] = `ShallowWrapper {}`;
+
+exports[`Checkout checkout 2`] = `ShallowWrapper {}`;
