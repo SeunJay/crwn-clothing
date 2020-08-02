@@ -12,7 +12,7 @@ const CollectionsOverviewWithSpinner = withSpinner(CollectionsOverview);
 const CollectionPageWithSpinner = withSpinner(CollectionPage);
 
 
-class Shop extends React.Component {
+export class Shop extends React.Component {
   async componentDidMount() {
     const { fetchCollectionsAsyncStart } = this.props;
 
