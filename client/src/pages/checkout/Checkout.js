@@ -16,7 +16,7 @@ import {
 } from "./checkout.styles";
 
 
-const Checkout = ({ cartItems, total }) => {
+export const Checkout = ({ cartItems, total }) => {
   return (
     <CheckoutPageContainer>
       <CheckoutHeader>
