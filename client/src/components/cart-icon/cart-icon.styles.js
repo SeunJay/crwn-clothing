@@ -11,6 +11,8 @@ export const CartIconWrapper = styled.div`
   cursor: pointer;
 `;
 
+CartIconWrapper.displayName = "CartIconWrapper";
+
 export const ShoppingIcon = styled(ShoppingIconSVG)`
   width: 24px;
   height: 24px;
@@ -22,3 +24,5 @@ export const ItemCount = styled.span`
   font-weight: bold;
   bottom: 12px;
 `;
+
+ItemCount.displayName = "ItemCount";
