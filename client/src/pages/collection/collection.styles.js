@@ -10,6 +10,8 @@ export const CollectionTitle = styled.h2`
   margin: 0 auto 30px;
 `;
 
+CollectionTitle.displayName = `CollectionTitle`;
+
 export const CollectionItemsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
