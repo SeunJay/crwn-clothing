@@ -9,7 +9,7 @@ import {
 } from "./collection.styles";
 import "./collection.scss";
 
-const CollectionPage = ({ collection }) => {
+export const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
